@@ -13,15 +13,35 @@ function calculateMoney(ticketSellCount) {
 // console.log(print);
 
 
+function checkName(str) {
 
-
-
-
-
-
-// function checkName() {
+    if (typeof str === 'string') {
+        const lastChar =str[str.length-1];
+        const lastCharLowerCase = lastChar.toLowerCase();
     
-// }
+        if (lastCharLowerCase === "a" || lastCharLowerCase === "y" || lastCharLowerCase === "i" || lastCharLowerCase === "e" || lastCharLowerCase === "o" || lastCharLowerCase === "u" || lastCharLowerCase === "w") {
+            return "Good Name";
+        }else{
+            return "Bad Name";
+        }
+    }else{
+        return "invalid";
+    }
+
+}
+
+const print = checkName(['Rashed']);
+console.log(print);
+
+
+
+
+
+
+
+
+
+
 // function deleteInvalids() {
     
 // }
